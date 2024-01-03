@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--STYLE-->
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/icon.png">
+
+  <!--TITLE  -->
+  <title>Smart Login System</title>
+</head>
+
+<body>
+
+  <main id="form" class="min-vh-100 d-block">
+    <div class="py-5">
+      <div class="container h-100">
+        <div class="row h-100 justify-content-center g-5 align-items-center">
+          <div class="col-lg-6 left h-100 d-flex position-relative justify-content-center align-items-center">
+            <div class="d-flex left-half-bottom py-5 justify-content-center">
+              <div class="clip"></div>
+              <div class="content text-center w-75">
+                <h1 class="fw-bold text-white">Learn To Code By Watching Others</h1>
+                <h2 class="fw-bold fs-3 text-white py-4">Simple Login System</h2>
+                <p class="text-white lh-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil
+                  quisquam atque dolores molestias quasi temporibus aliquam laudantium aut id!</p>
+                <div>
+                </div>
+                <p class="fw-bold fs-4 w-100">Get Connected</p>
+                <div class="icons d-flex justify-content-center">
+                  <div>
+                    <i class="fa-brands fa-facebook"></i>
+                  </div>
+                  <div>
+                    <i class="fa-brands fa-youtube"></i>
+                  </div>
+                  <div>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 h-100 px-0">
+            <div class="h-100">
+              <div id="register" class="register h-100 py-5 m-auto bg-white rounded-5 position-relative px-5">
+
+                <span class="position-absolute spans">
+                  <span class="">Login</span>
+                  <span class="active">Register</span>
+                </span>
+
+                <div class="pb-4">
+                  <span class="fs-2">Register</span>
+                </div>
+
+                <div class="position-relative inputdiv">
+                  <input type="text" class="w-100 py-2 fw-bold" id="userNameInput">
+                  <label class="label name position-absolute text-black-50" for="userNameInput">Name</label>
+                  <i id="successNameIcon" class="fa-solid fa-check text-success fw-bold position-absolute d-none"></i>
+                  <i id="wrongNameIcon" class="fa-solid fa-x text-danger fw-bold position-absolute d-none"></i>
+                  <p id="userNameAlert" class="m-0 text text-danger fw-bold d-none">Username must start with capital
+                    letter</p>
+                </div>
+                <div class="position-relative inputdiv">
+                  <input type="text" class="w-100 py-2 fw-bold" id="userEmailInput">
+                  <label class="label email position-absolute text-black-50" for="userEmailInput">Email</label>
+                  <i id="successEmailIcon" class="fa-solid fa-check text-success fw-bold position-absolute d-none"></i>
+                  <i id="wrongEmailIcon" class="fa-solid fa-x text-danger fw-bold position-absolute d-none"></i>
+                  <p id="userEmailAlert" class="m-0 text text-danger fw-bold d-none">Email should be like:
+                    someone@example.com</p>
+                </div>
+                <div class="position-relative inputdiv">
+                  <input type="password" class="w-100 py-2 fw-bold" id="userPasswordInput">
+                  <label class="label password position-absolute text-black-50" for="userPasswordInput">Password</label>
+                  <i id="successPasswordIcon"
+                    class="fa-solid fa-check text-success fw-bold position-absolute d-none"></i>
+                  <i id="wrongPasswordIcon" class="fa-solid fa-x text-danger fw-bold position-absolute d-none"></i>
+                  <p id="userPasswordAlert" class="m-0 text text-danger fw-bold d-none">Password should contain numbers
+                  </p>
+                </div>
+
+                <div class="pt-5 pb-4 d-flex justify-content-center">
+                  <button id="addUserBtn" class="btn btn-outline-success w-25">Register</button>
+                </div>
+                <p id="successMsg" class="text-success p-0 m-0 text-center fw-bold d-none">Registered Successfully</p>
+                <p id="errorMsg" class="text-danger p-0 m-0 text-center fw-bold d-none">All Inputs Are Required</p>
+                <p id="repeatedMsg" class="text-danger p-0 m-0 text-center fw-bold d-none">Email Already Exists. Try
+                  Another One</p>
+              </div>
+              <div id="login" class="register h-100 py-5 m-auto bg-white rounded-5 position-relative px-5 d-none">
+                <span class="position-absolute spans">
+                  <span class="active">Login</span>
+                  <span class="">Register</span>
+                </span>
+
+                <div class="pb-4">
+                  <span class="fs-2">Login</span>
+                </div>
+                <div class="position-relative inputdiv">
+                  <input type="text" class="w-100 py-2 fw-bold" id="userEmailInputLogin">
+                  <label class="label email position-absolute text-black-50" for="userEmailInput">Email</label>
+                  <i class="fa-solid fa-check text-success fw-bold position-absolute d-none"></i>
+                  <i class="fa-solid fa-x text-danger fw-bold position-absolute d-none"></i>
+                </div>
+                <div class="position-relative inputdiv">
+                  <input type="password" class="w-100 py-2 fw-bold" id="userPasswordInputLogin">
+                  <label class="label password position-absolute text-black-50" for="userPasswordInput">Password</label>
+                  <i class="fa-solid fa-check text-success fw-bold position-absolute d-none"></i>
+                  <i class="fa-solid fa-x text-danger fw-bold position-absolute d-none"></i>
+                  <p id="wrongLoginMsg" class="m-0 pt-4 text-center text-danger fw-bold d-none">Email or Password is Incorrect. Registeration is very easy!</p>
+                </div>
+                <div class="pt-5 pb-4 d-flex justify-content-center">
+                  <button id="loginBtn" class="btn btn-outline-success w-25">Login</button>
+                </div>
+                <p id="successLoginMsg" class="text-success p-0 m-0 text-center fw-bold d-none">Getting Your Page Ready</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section id="welcomePage" class="min-vh-100 w-100 d-none">
+
+    <div class="container h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-md-6 py-5 text-center">
+          <div>
+            <h1 class="text-white">Welcome <span id="userName">Abdelrahman</span></h1>
+          </div>
+          <div class="button">
+            <button id="logOutBtn" class="btn btn-outline-danger">Log Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Bootstrap-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!--JavaScript-->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
